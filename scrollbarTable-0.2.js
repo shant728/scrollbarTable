@@ -45,6 +45,7 @@
 			});
 			
 			/* Remove the header and put it before the rest of the table as a new table*/
+			$t.css('table-layout','fixed'); //Forces layout when width exceeds window/frame
 			var $firstRow = $t.clone();
 			$firstRow.find('tr:not(:first)').remove();
 			$t.find('tr:first').remove();
