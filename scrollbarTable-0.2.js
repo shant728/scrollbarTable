@@ -61,6 +61,8 @@
 			
 			/* Wrap the rest of the table in a scroller */
 			var $wrap = $('<div>');
+			if(h<o.height)
+				o.height=$h;
 			$wrap.css({
 				width:w,
 				height:o.height,
