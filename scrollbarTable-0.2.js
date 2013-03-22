@@ -15,6 +15,9 @@
 		return this.each(function(){
 			var $t = $(this);
 			
+			/*Get height of the current table*/
+			var h=$t.height();
+			
 			/* Make room for the scrollbar */
 			var w = $t.width();
 			$t.width(w-
@@ -61,6 +64,7 @@
 			
 			/* Wrap the rest of the table in a scroller */
 			var $wrap = $('<div>');
+			/* Only set the wrap div's height if it is larger than [o.height]*/
 			if(h<o.height)
 				o.height=$h;
 			$wrap.css({
